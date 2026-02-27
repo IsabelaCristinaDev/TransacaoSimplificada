@@ -25,8 +25,10 @@ public class Usuario {
 
     private String cpfCnpj;
     private String senha;
-    @OneToOne(mappedBy= "usuario" , cascade = Cascade )
+    @OneToOne(mappedBy= "usuario" , cascade = CascadeType.ALL )
     private Carteira carteira;
+    private TipoUsuario tipoUsuario;
+
 
 
 
