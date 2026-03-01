@@ -1,5 +1,7 @@
 package com.isabela.transacao_simplificada.service;
 
+import com.isabela.transacao_simplificada.infrastructure.entity.Usuario;
+import com.isabela.transacao_simplificada.infrastructure.exceptions.UserNotFound;
 import com.isabela.transacao_simplificada.infrastructure.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,6 +12,12 @@ public class UsuarioService {
 
     private final UsuarioRepository repository;
 
+    public Usuario buscarUsaurio(Long id ){
+       return repository.findById(id)
+               .orElseThrow (() ->
+                       new UserNotFound("Usuario nao encontrado"));
+
+    }
 
 
 }
