@@ -1,10 +1,7 @@
 package com.isabela.transacao_simplificada.infrastructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -15,12 +12,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity(name= "transacao")
 @Table
+@Builder
 public class Transacoes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private BigDecimal saldo;
+    private BigDecimal valor;
 
     @JoinColumn(name="recebedor_id")
     @ManyToOne
