@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 @Service
 @RequiredArgsConstructor
 
-public class TransferenciaService {
+public class TransacaoService {
     private final UsuarioService usuarioService;
     private final AutorizacaoService autorizacaoService;
     private final CarteiraService carteiraService;
@@ -50,7 +50,7 @@ public class TransferenciaService {
 
     private void validarPagadorLogista(Usuario usuario) {
         try {
-            if (usuario.getTipoUsuario().equals(TipoUsuario.LOGISTA)) {
+            if (usuario.getTipoUsuario().equals(TipoUsuario.LOJISTA)) {
                 throw new IllegalArgumentException("Transação nao autorizada para esse tipo de usuario");
             }
         } catch (Exception e) {
