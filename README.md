@@ -33,10 +33,8 @@ Lombok
 Maven
 
 Executando
-bash# Clone o repositório
-git clone https://github.com/seu-usuario/transacao-simplificada.git
-
- Acesse a pasta do projeto
+Clone o repositório
+git clone (https://github.com/IsabelaCristinaDev/TransacaoSimplificada.git)
+Acesse a pasta do projeto
 cd transacao-simplificada
-
- Execute projeto 
+Execute projeto 
