@@ -27,7 +27,7 @@ public class PopularTabelaUsuario {
                 Usuario usuario2 = new Usuario(null, "Ana Maria", "ana@email.com", "22222222222",
                         encoder.encode("123456"), null, TipoUsuario.COMUM);
 
-                Usuario lojista = new Usuario(null, "Loja Exemplo", "loja@email.com", "33333333333",
+                Usuario lojista = new Usuario(null, "Loja Atacadao", "lojaatacadao@email.com", "33333333333",
                         encoder.encode("123456"), null, TipoUsuario.LOJISTA);
 
                 usuarioRepository.saveAll(List.of(usuario1, usuario2, lojista));
